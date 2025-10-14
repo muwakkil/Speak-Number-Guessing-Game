@@ -6,7 +6,7 @@
 
 body {
     /* responsive measures */
-  background: #2f3542 url('img/bg.jpg') no-repeat left center/cover;
+  background:linear-gradient(rgba(12, 23, 42, 0.843), rgba(9, 25, 58, 0.65)),url('img/photo4code.png') no-repeat left center/cover;
   color: #fff;
   min-height: 100vh;
   display: flex;
@@ -14,7 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Lekton", sans-serif;
 }
 
 h1,
@@ -40,7 +40,23 @@ h3 {
 .play-again {
   padding: 8px 15px;
   border: 0;
-  background-color: #f4f4f4;
+  background-color: #f97fb6;
   border-radius: 5px;
   margin-top: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+
+#play-again:hover {
+    background: #590a2e;
+    transform: scale(1.2);
+}
+
+
+#waveform {
+  width: 500px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.204);
+  border-radius: 8px;
+  margin-bottom: 20px;
 }

@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Speak Number Guessing Game</title>
-    <script src="script.js" defer></script>
+    <script src="scripts.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Lekton:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   </head>
   <body>
-    <img src="img/mic.png" alt="Microphone Icon" />
+
+    <div class="visualizer-wrap" >
+      <canvas id="waveform" class="waveform" ></canvas>
+    </div>
+
+    <!-- <img src="img/mic.png" alt="Microphone Icon" /> -->
     <h1>Guess a Number Between 1 – 100</h1>
     <h3>Speak the number into your microphone</h3>
 <!-- Display spoken content -->
     <div id="msg" class="msg"></div>
+
   </body>
 
 </html>
