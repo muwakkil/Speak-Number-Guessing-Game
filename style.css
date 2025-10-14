@@ -5,6 +5,7 @@
 }
 
 body {
+    /* responsive measures */
   background: #2f3542 url('img/bg.jpg') no-repeat left center/cover;
   color: #fff;
   min-height: 100vh;
@@ -22,6 +23,7 @@ h3 {
 }
 
 .msg {
+    /* *value of parent */
   font-size: 1.5em;
   margin-top: 40px;
 }

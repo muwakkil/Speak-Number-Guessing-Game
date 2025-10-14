@@ -4,7 +4,7 @@ const msgEl = document.getElementById('msg');
 function getRandomNumber() {
   return Math.floor(Math.random() * 100) + 1;
 }
-
+// can be get
 const randomNum = getRandomNumber();
 console.log('Number:', randomNum);
 
@@ -19,12 +19,15 @@ recognition.start();
 // Capture user speak
 function onSpeak(event) {
   const msg = event.results[0][0].transcript;  // You can log the event to view the structure of the data
-  console.log(msg);
+// console.log(msg);
+  writeMessage(msg);
+  checkNumber(msg);
 }
-
+// Listen to and handle the speech event
 // Speak result
 recognition.addEventListener('result', onSpeak);
 
+//See in the DOM what the user has spoken
 // Write what user speaks
 function writeMessage(msg) {
   const div = document.createElement('div');
@@ -38,7 +41,7 @@ function writeMessage(msg) {
 
 // Check msg against the secret number
 function checkNumber(msg) {
-  let num = Number(msg);  // 👈 This is now a let instead of const since I reassign the value below
+  let num = Number(msg);  // 👈 This is now a let instead of const since I reassign the value below (msg = "hello world")
 
   // Update the value of num if it's a single-digit number
   if (msg === 'one' || msg === 'won') {
@@ -68,6 +71,15 @@ function checkNumber(msg) {
     msgEl.append(div);
 
     return;
+  }
+
+
+  //Check for range
+
+  if (num < 1 || num > 100) {
+    const div = document.createElement('div');
+    div.textContent = 'Number must be between 1 and 100';
+    msgEl.append(div);
   }
 
   // Check the number and provide feedback
